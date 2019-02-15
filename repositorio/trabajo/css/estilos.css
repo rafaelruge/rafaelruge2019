@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Germania+One');
+
+html{
+	font-family: 'Germania One', cursive;
+}
+body{
+	background-image: url('../imagenes/ubisoft-625x352.jpg');
+	background-repeat: no-repeat;
+	background-size: 125%;
+}
+
+.contenedor{
+	max-width: 100%;
+	margin: 0px auto;
+}
+
+.logo{
+	margin: 25px;
+	text-align: center;
+}
+img{
+	max-width: 100%;
+	height: auto;
+}
+nav{
+	background-color: #311a50;
+	text-align: center;
+}
+.menu-item{
+	text-transform: uppercase;
+	display: inline-block;
+
+}
+
+.menu-item a div{
+	padding: 20px;
+}
+
+.menu-item a{
+	text-decoration: none;
+	color: white;
+}
+
+.menu-item :hover{
+	background-color: #4e62a1;
+}
+.banner{
+	margin: 0 auto;
+	text-align: center;
+}
+.seccion{
+	margin: 0 auto;
+    text-align: center;
+}

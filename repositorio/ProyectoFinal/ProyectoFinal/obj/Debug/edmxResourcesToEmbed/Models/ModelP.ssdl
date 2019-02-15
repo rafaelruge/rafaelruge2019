@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModelProyecto.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="11.2" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ADMINISTRADOR">
+    <Key>
+      <PropertyRef Name="ID_ADMINISTRADOR" />
+    </Key>
+    <Property Name="ID_ADMINISTRADOR" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NOMBRE_ADMINISTRADOR" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="APELLIDO_ADMINISTRADOR" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="CORREO_ADMINISTRADOR" Type="varchar2" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ADMINISTRADOR_CLIENTE">
+    <Key>
+      <PropertyRef Name="ID_ADMINISTRADOR_CLIENTE" />
+    </Key>
+    <Property Name="ID_ADMINISTRADOR" Type="number" Precision="38" Scale="0" />
+    <Property Name="ID_CLIENTE" Type="number" Precision="38" Scale="0" />
+    <Property Name="ID_ADMINISTRADOR_CLIENTE" Type="number" Precision="38" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ADMINISTRADOR_VIDEOJUEGO">
+    <Key>
+      <PropertyRef Name="ID_ADMINISTRADOR_VIDEOJUEGO" />
+    </Key>
+    <Property Name="ID_ADMINISTRADOR" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ID_VIDEOJUEGO" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ID_ADMINISTRADOR_VIDEOJUEGO" Type="number" Precision="38" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CLIENTE">
+    <Key>
+      <PropertyRef Name="ID_CLIENTE" />
+    </Key>
+    <Property Name="ID_CLIENTE" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NOMBRE_CLIENTE" Type="varchar2" MaxLength="30" Nullable="false" />
+    <Property Name="APELLIDO_CLIENTE" Type="varchar2" MaxLength="30" Nullable="false" />
+    <Property Name="CORREO_CLIENTE" Type="varchar2" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VIDEOJUEGO">
+    <Key>
+      <PropertyRef Name="ID_VIDEOJUEGO" />
+    </Key>
+    <Property Name="ID_VIDEOJUEGO" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NOMBRE_VIDEOJUEGO" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="CATEGORIA_VIDOJUEGO" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="PESO_VIDEOJUEGO" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="CATEGORIA_EDAD" Type="varchar2" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="ADMINISTRADOR_CLIENTE_FK1">
+    <End Role="ADMINISTRADOR" Type="Self.ADMINISTRADOR" Multiplicity="0..1" />
+    <End Role="ADMINISTRADOR_CLIENTE" Type="Self.ADMINISTRADOR_CLIENTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ADMINISTRADOR">
+        <PropertyRef Name="ID_ADMINISTRADOR" />
+      </Principal>
+      <Dependent Role="ADMINISTRADOR_CLIENTE">
+        <PropertyRef Name="ID_ADMINISTRADOR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ADMINISTRADOR_CLIENTE_FK2">
+    <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="0..1" />
+    <End Role="ADMINISTRADOR_CLIENTE" Type="Self.ADMINISTRADOR_CLIENTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLIENTE">
+        <PropertyRef Name="ID_CLIENTE" />
+      </Principal>
+      <Dependent Role="ADMINISTRADOR_CLIENTE">
+        <PropertyRef Name="ID_CLIENTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ADMINISTRADOR_VIDEOJUEGO_FK1">
+    <End Role="ADMINISTRADOR" Type="Self.ADMINISTRADOR" Multiplicity="1" />
+    <End Role="ADMINISTRADOR_VIDEOJUEGO" Type="Self.ADMINISTRADOR_VIDEOJUEGO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ADMINISTRADOR">
+        <PropertyRef Name="ID_ADMINISTRADOR" />
+      </Principal>
+      <Dependent Role="ADMINISTRADOR_VIDEOJUEGO">
+        <PropertyRef Name="ID_ADMINISTRADOR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ADMINISTRADOR_VIDEOJUEGO_FK2">
+    <End Role="VIDEOJUEGO" Type="Self.VIDEOJUEGO" Multiplicity="1" />
+    <End Role="ADMINISTRADOR_VIDEOJUEGO" Type="Self.ADMINISTRADOR_VIDEOJUEGO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VIDEOJUEGO">
+        <PropertyRef Name="ID_VIDEOJUEGO" />
+      </Principal>
+      <Dependent Role="ADMINISTRADOR_VIDEOJUEGO">
+        <PropertyRef Name="ID_VIDEOJUEGO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ModelProyectoStoreContainer">
+    <EntitySet Name="ADMINISTRADOR" EntityType="Self.ADMINISTRADOR" Schema="ADMI" store:Type="Tables" />
+    <EntitySet Name="ADMINISTRADOR_CLIENTE" EntityType="Self.ADMINISTRADOR_CLIENTE" Schema="ADMI" store:Type="Tables" />
+    <EntitySet Name="ADMINISTRADOR_VIDEOJUEGO" EntityType="Self.ADMINISTRADOR_VIDEOJUEGO" Schema="ADMI" store:Type="Tables" />
+    <EntitySet Name="CLIENTE" EntityType="Self.CLIENTE" Schema="ADMI" store:Type="Tables" />
+    <EntitySet Name="VIDEOJUEGO" EntityType="Self.VIDEOJUEGO" Schema="ADMI" store:Type="Tables" />
+    <AssociationSet Name="ADMINISTRADOR_CLIENTE_FK1" Association="Self.ADMINISTRADOR_CLIENTE_FK1">
+      <End Role="ADMINISTRADOR" EntitySet="ADMINISTRADOR" />
+      <End Role="ADMINISTRADOR_CLIENTE" EntitySet="ADMINISTRADOR_CLIENTE" />
+    </AssociationSet>
+    <AssociationSet Name="ADMINISTRADOR_CLIENTE_FK2" Association="Self.ADMINISTRADOR_CLIENTE_FK2">
+      <End Role="CLIENTE" EntitySet="CLIENTE" />
+      <End Role="ADMINISTRADOR_CLIENTE" EntitySet="ADMINISTRADOR_CLIENTE" />
+    </AssociationSet>
+    <AssociationSet Name="ADMINISTRADOR_VIDEOJUEGO_FK1" Association="Self.ADMINISTRADOR_VIDEOJUEGO_FK1">
+      <End Role="ADMINISTRADOR" EntitySet="ADMINISTRADOR" />
+      <End Role="ADMINISTRADOR_VIDEOJUEGO" EntitySet="ADMINISTRADOR_VIDEOJUEGO" />
+    </AssociationSet>
+    <AssociationSet Name="ADMINISTRADOR_VIDEOJUEGO_FK2" Association="Self.ADMINISTRADOR_VIDEOJUEGO_FK2">
+      <End Role="VIDEOJUEGO" EntitySet="VIDEOJUEGO" />
+      <End Role="ADMINISTRADOR_VIDEOJUEGO" EntitySet="ADMINISTRADOR_VIDEOJUEGO" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

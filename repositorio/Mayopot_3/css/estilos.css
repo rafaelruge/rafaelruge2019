@@ -1,0 +1,136 @@
+*{padding: 0px;margin: 0px;
+}
+body{
+    background-image:url(../imagenes/fondo.jpg);
+}
+.div_header{
+    width: 1010px;
+    height: 129px;
+    font-size: 0px;
+    margin: 0px auto;
+}
+.div_logo{
+    width: 205px;
+    height: 129px;
+    white-space: nowrap;
+    float: left;
+}
+.div_menu{
+    float: left;
+    white-space: nowrap;    
+}
+
+.div_contenido{
+    width: 1010px;
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: 0;
+    font-size: 0px;
+}
+
+.div_seccion{
+    width: 673px;
+    height: 434px;
+    float: left;
+    background-image: url(../imagenes/seccion_video.png);
+    display: table;
+    text-align: center;
+}
+
+.div_video{
+    width: 620px;
+    height: 420px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.div_mayopot{
+    width: 337px;
+    height: 228px;
+}
+
+.div_unilever{
+   float: left;
+}
+
+.controles{
+    float: left;
+    margin-left: 80px;
+    display: inline-block;
+    width: 512px;
+    height: 30px;
+    background-color: white;
+    border: 0px 
+}
+
+.reproducir{
+    width: 50px;
+}
+
+#barra_video{
+    background-color: white;
+    width: 235px;
+    height: 4px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 3px; 
+}
+
+#progreso_video{
+    width: 0px;
+    height: 5px;
+    background-color: blue;
+    position: absolute;
+}
+
+.tiempoVideo{
+    width: 50px;
+    font-family: Arial;
+    color: black;
+    font-weight: bold;
+    font-size: 11px;
+    text-align: center;
+}
+
+.col_volumen{
+    width: 26px;
+}
+.col_barra_vol{
+    width: 90px;
+}
+
+#barra_vol{
+    background-color: white;
+    width: 63px;
+    height: 4px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 3px; 
+    margin: auto;
+}
+
+#progreso_vol{
+    width: 0px;
+    height: 5px;
+    background-color: blue;
+    position: absolute;
+}
+.div_foot{
+    float: left;
+}
+.contacto{
+    background-image: url('../imagenes/contacto/contacto.jpg');
+    width: 940px;
+    height: 567px;
+    border: 0px;
+    vertical-align: top;
+}
+#tbl_form{
+    margin-top: 50px;
+}
+.txt_form{
+    font-size: 12px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: red;
+}

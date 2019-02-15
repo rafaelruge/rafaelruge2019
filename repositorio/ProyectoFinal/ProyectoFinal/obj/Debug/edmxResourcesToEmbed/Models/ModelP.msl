@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelProyectoStoreContainer" CdmEntityContainer="contextosProyec">
+    <EntitySetMapping Name="ADMINISTRADOR">
+      <EntityTypeMapping TypeName="ModelProyecto.ADMINISTRADOR">
+        <MappingFragment StoreEntitySet="ADMINISTRADOR">
+          <ScalarProperty Name="ID_ADMINISTRADOR" ColumnName="ID_ADMINISTRADOR" />
+          <ScalarProperty Name="NOMBRE_ADMINISTRADOR" ColumnName="NOMBRE_ADMINISTRADOR" />
+          <ScalarProperty Name="APELLIDO_ADMINISTRADOR" ColumnName="APELLIDO_ADMINISTRADOR" />
+          <ScalarProperty Name="CORREO_ADMINISTRADOR" ColumnName="CORREO_ADMINISTRADOR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADMINISTRADOR_CLIENTE">
+      <EntityTypeMapping TypeName="ModelProyecto.ADMINISTRADOR_CLIENTE">
+        <MappingFragment StoreEntitySet="ADMINISTRADOR_CLIENTE">
+          <ScalarProperty Name="ID_ADMINISTRADOR" ColumnName="ID_ADMINISTRADOR" />
+          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+          <ScalarProperty Name="ID_ADMINISTRADOR_CLIENTE" ColumnName="ID_ADMINISTRADOR_CLIENTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADMINISTRADOR_VIDEOJUEGO">
+      <EntityTypeMapping TypeName="ModelProyecto.ADMINISTRADOR_VIDEOJUEGO">
+        <MappingFragment StoreEntitySet="ADMINISTRADOR_VIDEOJUEGO">
+          <ScalarProperty Name="ID_ADMINISTRADOR" ColumnName="ID_ADMINISTRADOR" />
+          <ScalarProperty Name="ID_VIDEOJUEGO" ColumnName="ID_VIDEOJUEGO" />
+          <ScalarProperty Name="ID_ADMINISTRADOR_VIDEOJUEGO" ColumnName="ID_ADMINISTRADOR_VIDEOJUEGO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLIENTE">
+      <EntityTypeMapping TypeName="ModelProyecto.CLIENTE">
+        <MappingFragment StoreEntitySet="CLIENTE">
+          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+          <ScalarProperty Name="NOMBRE_CLIENTE" ColumnName="NOMBRE_CLIENTE" />
+          <ScalarProperty Name="APELLIDO_CLIENTE" ColumnName="APELLIDO_CLIENTE" />
+          <ScalarProperty Name="CORREO_CLIENTE" ColumnName="CORREO_CLIENTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIDEOJUEGO">
+      <EntityTypeMapping TypeName="ModelProyecto.VIDEOJUEGO">
+        <MappingFragment StoreEntitySet="VIDEOJUEGO">
+          <ScalarProperty Name="ID_VIDEOJUEGO" ColumnName="ID_VIDEOJUEGO" />
+          <ScalarProperty Name="NOMBRE_VIDEOJUEGO" ColumnName="NOMBRE_VIDEOJUEGO" />
+          <ScalarProperty Name="CATEGORIA_VIDOJUEGO" ColumnName="CATEGORIA_VIDOJUEGO" />
+          <ScalarProperty Name="PESO_VIDEOJUEGO" ColumnName="PESO_VIDEOJUEGO" />
+          <ScalarProperty Name="CATEGORIA_EDAD" ColumnName="CATEGORIA_EDAD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

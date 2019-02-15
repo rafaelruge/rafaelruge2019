@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>hola</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>hola</div>
+        <form name="form1" action="/headers/ServletHeaders" method="post">
+             Usuario: <input type="text" name="usuario" placeholder="Digita tu usuario"/>
+                <br>
+                Password: <input type="Password" name="password" value="" placeholder="Digita tu password"/>
+                <br>
+                <input type="submit" value="Enviar"/>
+                <!DOCTYPE html>
+
+<script type="text/javascript">
+
+	
+	var detectarNavegador = window.navigator.userAgent;
+	var chrome = /Chrome/;
+	var firefox = /Firefox/;
+	var opera = /OPR/;
+	var Trident = /Trident/;
+	var safari = /Safari/;
+	var navegador;
+	if(chrome.test(detectarNavegador) && !(opera.test(detectarNavegador)) && !(edge.test(detectarNavegador))){
+		navegador = 'Google Chrome';
+	}else if(firefox.test(detectarNavegador)){
+		navegador = 'Firefox Mozilla';
+	}else if(safari.test(detectarNavegador) && !(chrome.test(detectarNavegador))){
+		navegador = 'Apple Safari';
+	}else if(opera.test(detectarNavegador)){
+		navegador = 'Opera';
+	}else if(Trident.test(detectarNavegador)){
+		navegador = 'Internet Explorer';
+	}else{
+		navegador = 'un navegador desconocido';
+	}
+	alert('Detectado tu navegador con Expresión Regular.\nEstás usando: '+navegador);
+
+	
+	if(detectarNavegador.indexOf('Chrome')!=-1 && detectarNavegador.indexOf('OPR')==-1 && detectarNavegador.indexOf('Edge')==-1){
+		navegador = 'Google Chrome';
+	}else if(detectarNavegador.indexOf('Firefox')!=-1){
+		navegador = 'Firefox Mozilla';
+	}else if(detectarNavegador.indexOf('Safari')!=-1 && detectarNavegador.indexOf('Chrome')==-1){
+		navegador = 'Apple Safari';
+	}else if(detectarNavegador.indexOf('OPR')!=-1){
+		navegador = 'Opera';
+	}else if(detectarNavegador.indexOf('Trident')!=-1){
+		navegador = 'Internet Explorer';
+	}else{
+		navegador = 'un navegador Desconocido';
+	}
+	alert('Detectado tu navegador con "indexOf".\nEstás usando: '+navegador)
+
+
+</script>
+        </form>
+    </body>
+</html>

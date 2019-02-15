@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejemplo formulario</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="js/funciones.js">
+		
+	</script>
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+</head>
+<body>
+<form action="execute.php" method="post" onsubmit="return validacion();">
+	<ul>
+	<li><label>Nombres:</label>
+		<input type="text" name="nom" id="nombres" placeholder=" Rafael Eduardo" /></li>
+	<li><label>Apellidos:</label>
+		<input type="text" name="ape" id="apellidos" placeholder=" Ruge Espinosa" /></li>
+	<li><label>E-mail:</label>
+		<input type="E-mail" name="email" id="email" placeholder="correo@gmil.com" required="@.com" /><span class="form_hint">Formato adecuado "correo@gmail.com"</span></li>
+
+	<h1><input  type="submit" id="submit" value="Ingresar"/>
+	<button class="reset" type="reset">Reiniciar</button> </h1>	
+</ul>
+</form>
+</body>
+</html>

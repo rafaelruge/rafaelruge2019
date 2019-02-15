@@ -1,0 +1,20 @@
+1
+deseñar un programa que pida un numero y muestre por grafico la tabla de multiplicar(ya)
+2
+un programa que pregunte el numero de horas y el valor y de la hora e informe por pantalla el valor del salario el valor del descuento y el metodo a pagar.
+de acuerdo a lo siguiente:
+-si el salario es menor a un millon de pesos- el descuento es del 0.5 porciento
+-si el salario esta entre un millon y menos de tres millones, el descuento es del 3.5 porciento.
+-si el salario esta entre los tres millones y menos que cinco millones, el descuento sera de 5.5 porciento
+-si el salario esta entre cinco y diez millones se descuenta el 9.93 porciento
+-si es superior a diez millones se decuenta el 12 porciento.
+se debe validar que el numero de horas, no super las docientas ciencuenta, pero que no sea inferior a sesenta
+ademas el valor de la hora minima es de sera de 8.000 pesos y maxima de 55.000 pesos
+3
+diseñe un programa que cargue una matriz de 5*4 con numeros enteros positivos, he infome por pantalla lo siengiente
+la suma de los numeros pares , en las filas impares, la multiplicacion de los numeros impares en las filas pares, y viseverza con las columnas.
+4
+consola
+ diseñar un programa en consola que cargue una lista, con N nombres, y con N edades y luego pregunte que sea hacer si adisionar o eliminar el dato
+y de acuerdo a la opcion seleccionada mostrar la lista actulizada.
+

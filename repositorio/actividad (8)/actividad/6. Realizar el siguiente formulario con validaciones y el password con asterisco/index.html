@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejemplo formulario</title>
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<meta charset="utf-8">
+	<script type="text/javascript" src="js/funciones.js">
+		
+	</script>
+	
+</head>
+<body>
+	<a>Formulario Registro de datos</a>
+<form action="execute.php" method="post" onsubmit="return validacion();">
+	<ul>
+	<li><label>UserName:</label>
+		<input type="text" name="UserName" id="userName" placeholder=" nickas" /></li>
+	<li><label>Password:</label>
+		<input type="Password" name="Password" id="password" placeholder="******" /></li>
+
+		<div class="input-group radio">
+			<li><label>tecnologias de interes:</label>
+			<label for="java"></label>
+			<input type="radio" name="java" id="java" value="java">
+			<label for="java">Java</label>
+
+			<label for=".net"></label>
+			<input type="radio" name=".net" id=".net" value=".net">
+			<label for=".net">.Net</label>
+
+			<label for="php"></label>
+			<input type="radio" name="php" id="php" value="php">
+			<label for="php">Php</label>
+
+			</li> 
+		<div class="input-group radio">
+			<li><label>Genero:</label>
+			<label for="hombre"></label>
+			<input type="radio" name="sexo" id="hombre" value="hombre">
+			<label for="hombre">Hombre</label>
+
+			<label for="mujer"></label>
+			<input type="radio" name="sexo" id="mujer" value="mujer">
+			<label for="mujer">Mujer</label>
+
+			</li> 
+			<li><label>Ocupacion:</label>
+
+			<form>
+				<select id="lista" name="lista">
+					<option>trabajador</option>
+				<option>Decempleado</option>
+				<option>independiente</option>
+				</select>
+			</form></li>
+	
+
+
+			</li> 
+			<li><label>Musica favorita:</label>
+			<form>
+				<select id="lista" name="lista">
+				<option>Rock</option>
+				<option>Rap</option>
+				<option>Electronica</option>
+				</select>
+			</form></li>
+
+			<li><label>Comentarios:</label></li>
+			<textarea name="mensaje" placeholder="Escriba aqui su comentario"></textarea>
+	<h1><button class="reset" type="reset">Reiniciar</button> 
+	<input  type="submit" id="submit" value="Ingresar"/></h1>
+		
+</ul>
+</form>
+</body>
+</html>
